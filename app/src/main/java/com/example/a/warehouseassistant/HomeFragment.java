@@ -14,7 +14,7 @@ import android.widget.Button;
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment implements View.OnClickListener {
-    private Button bnAddProduct,bnReadProduct,bnDeleteProduct;
+    private Button bnAddProduct,bnReadProduct,bnDeleteProduct, bnEditProduct;
 
 
     public HomeFragment() {
@@ -36,6 +36,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         bnDeleteProduct=view.findViewById(R.id.delete_product);
         bnDeleteProduct.setOnClickListener(this);
 
+        bnEditProduct=view.findViewById(R.id.edit_product);
+        bnEditProduct.setOnClickListener(this);
+
 
 
 
@@ -55,6 +58,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.delete_product:
                 ManageDB.fragmentManager.beginTransaction().replace(R.id.fragment_container,new DeleteProductFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.edit_product:
+                ManageDB.fragmentManager.beginTransaction().replace(R.id.fragment_container,new UpdateFragment()).addToBackStack(null).commit();
                 break;
         }
 

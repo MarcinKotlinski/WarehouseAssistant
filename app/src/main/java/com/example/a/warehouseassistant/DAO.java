@@ -18,4 +18,7 @@ public interface DAO {
 
     @Delete
     public void deleteProduct(Stock stock);
+
+    @Update
+    public void updateProduct(Stock stock);
 }
