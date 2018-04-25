@@ -38,8 +38,11 @@ public class AddProductFragment extends Fragment {
         ProductQuantity=view.findViewById(R.id.quantity_plaintext);
         BnSave= view.findViewById(R.id.add_button);
 
-        String Item = getActivity().getIntent().getExtras().getString("kodKreskowyProduktu");
-        ProductBarcode.setText(Item);
+        String shelf = getActivity().getIntent().getExtras().getString("resultShelf");
+        String product = getActivity().getIntent().getExtras().getString("kodKreskowyP");
+
+        ProductBarcode.setText(product);
+        ShelfBarcode.setText(shelf);
 
         BnSave.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -139,8 +139,8 @@ public class ScannerShelf extends AppCompatActivity implements ZXingScannerView.
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent intent1=getIntent();
-                String kodKreskowyProduktu = intent1.getStringExtra("kodProduktu");
-                Intent intent=new Intent(ScannerShelf.this, AddToDB.class);
+                String kodKreskowyProduktu = intent1.getStringExtra("kodKreskowyProduktu");
+                Intent intent=new Intent(ScannerShelf.this, ManageDB.class);
                 intent.putExtra("resultShelf", String.valueOf(scanResult));
                 intent.putExtra("kodKreskowyP", String.valueOf(kodKreskowyProduktu));
                 startActivity(intent);

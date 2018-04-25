@@ -142,10 +142,10 @@ public class ScannerProduct extends AppCompatActivity implements ZXingScannerVie
         final String scanResult = result.getText();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Zeskanowany kod");
-        builder.setPositiveButton("Dodaj do magazynu", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Skanuj kod półki", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Intent intent=new Intent(ScannerProduct.this, ManageDB.class);
+                Intent intent=new Intent(ScannerProduct.this, ScannerShelf.class);
                 intent.putExtra("kodKreskowyProduktu", String.valueOf(result));
                 startActivity(intent);
                 finish();
