@@ -145,7 +145,7 @@ public class ScannerProduct extends AppCompatActivity implements ZXingScannerVie
         builder.setPositiveButton("Dodaj do magazynu", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Intent intent=new Intent(ScannerProduct.this, AddToDB.class);
+                Intent intent=new Intent(ScannerProduct.this, ManageDB.class);
                 intent.putExtra("kodKreskowyProduktu", String.valueOf(result));
                 startActivity(intent);
                 finish();

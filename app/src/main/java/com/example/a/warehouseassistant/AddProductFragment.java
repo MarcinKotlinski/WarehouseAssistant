@@ -1,6 +1,7 @@
 package com.example.a.warehouseassistant;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -36,6 +37,9 @@ public class AddProductFragment extends Fragment {
         ShelfBarcode=view.findViewById(R.id.barcodeShelf_plaintext);
         ProductQuantity=view.findViewById(R.id.quantity_plaintext);
         BnSave= view.findViewById(R.id.add_button);
+
+        String Item = getActivity().getIntent().getExtras().getString("kodKreskowyProduktu");
+        ProductBarcode.setText(Item);
 
         BnSave.setOnClickListener(new View.OnClickListener() {
             @Override
