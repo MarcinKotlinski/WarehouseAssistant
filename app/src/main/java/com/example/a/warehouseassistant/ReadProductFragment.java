@@ -42,9 +42,6 @@ public class ReadProductFragment extends Fragment {
 
              info= info+"Kod kreskowy produktu: "+bc+"\n"+"Kod kreskowy półki: "+cd+"\n"+"Nazwa produktu: "+nm+"\n"+"Ilość produktu: "+qn+"\n\n";
 
-
-
-
         }
 
         txtinfo.setText(info);

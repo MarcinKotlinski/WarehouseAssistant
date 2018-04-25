@@ -65,7 +65,7 @@ public class AddProductFragment extends Fragment {
 
 
                 ManageDB.myAppDatabase.dao().addProduct(stock);
-                Toast.makeText(getActivity(),"Produkt dodany prawidłowo!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Produkt dodany prawidłowo",Toast.LENGTH_SHORT).show();
 
                 ProductBarcode.setText("");
                 ShelfBarcode.setText("");

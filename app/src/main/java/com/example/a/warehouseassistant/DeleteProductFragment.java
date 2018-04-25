@@ -36,12 +36,12 @@ public class DeleteProductFragment extends Fragment {
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int barcodeID= Integer.parseInt(TxtProductId.getText().toString());
+                String nazwa= TxtProductId.getText().toString();
                 Stock stock = new Stock();
-                stock.setBarcodeProduct(barcodeID);
+                stock.setName(nazwa);
                 ManageDB.myAppDatabase.dao().deleteProduct(stock);
 
-                Toast.makeText(getActivity(),"Produkt poprawnie usuniety",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Produkt usunięty prawidłowo",Toast.LENGTH_SHORT).show();
                 TxtProductId.setText("");
             }
         });

@@ -51,7 +51,7 @@ public class UpdateFragment extends Fragment {
                 stock.setBarcodeShelf(sb);
 
                 ManageDB.myAppDatabase.dao().updateProduct(stock);
-                Toast.makeText(getActivity(),"Stock updated",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Dane produktu zaktualizowane prawidłowo",Toast.LENGTH_SHORT).show();
                 ProductBarcode.setText("");
                 Name.setText("");
                 Quantity.setText("");
