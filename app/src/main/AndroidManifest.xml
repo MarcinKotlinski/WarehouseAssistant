@@ -46,7 +46,7 @@
         <activity
             android:name=".ManageDB"
             android:label="Zarządzanie magazynem" />
-
+        <activity android:name=".GeneratorRaportow"></activity>
     </application>
 
 </manifest>

@@ -17,7 +17,7 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class ReadProductFragment extends Fragment {
-    private TextView txtinfo;
+    private static TextView txtinfo;
 
 
     public ReadProductFragment() {
@@ -47,5 +47,7 @@ public class ReadProductFragment extends Fragment {
         txtinfo.setText(info);
         return view;
     }
-
+public static String getTextInfo(){
+        return txtinfo.getText().toString();
+}
 }

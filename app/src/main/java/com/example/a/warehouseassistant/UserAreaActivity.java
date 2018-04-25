@@ -33,5 +33,11 @@ public class UserAreaActivity extends AppCompatActivity {
                 startActivity(i);
             }
         }
+    public void onRaportClick(View viw){
+        if(viw.getId()== R.id.button2){
+            Intent i = new Intent(UserAreaActivity.this, GeneratorRaportow.class);
+            startActivity(i);
+        }
+    }
     }
 
